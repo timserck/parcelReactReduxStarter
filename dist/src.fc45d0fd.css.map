@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/app/components/Loader/Loader.scss","src/app/components/App/App.scss"],"names":[],"mappings":"AAAA,QACI,eCDJ","file":"src.fc45d0fd.css","sourceRoot":"..","sourcesContent":[".loader{\n    background: red;\n}",""]}

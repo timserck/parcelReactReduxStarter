@@ -1,0 +1,29 @@
+html{
+    height: 100%;
+    font-family: "Source Sans Pro",Helvetica,arial,sans-serif;
+}
+body{
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    height: 100%;
+}
+
+main{
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.container{
+
+}
+
+.header{
+
+}
+
+
+
+.footer{
+
+}
