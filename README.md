@@ -2,4 +2,5 @@
 
 npm i\
 npm run dev\
-have fun
+have fun\
+npm run build
