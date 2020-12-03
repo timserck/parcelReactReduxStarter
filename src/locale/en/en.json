@@ -1,0 +1,13 @@
+{
+    "HOME_PAGE": {
+        "META": {
+          "TITLE": "Page d'accueil - titre",
+          "DESCRIPTION": "Page d'accueil - description",
+          "SOCIAL_TITLE": "Page d'accueil - titre",
+          "SOCIAL_DESCRIPTION": "Page d'accueil - description",
+          "SOCIAL_IMAGE_URL": "social-image.jpg"
+        },
+        "TITLE": "Page d'accueil",
+        "BUTTON": "Bienvenue !"
+    }
+}
