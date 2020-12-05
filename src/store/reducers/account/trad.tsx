@@ -10,7 +10,7 @@ const trad = (state=initialState, action) =>
     case tradTypes.SET_TRAD:
         return {
             ...state,
-            lang: action.lang
+            lang: action.payload
         }
     default:
         return state;

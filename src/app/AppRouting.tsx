@@ -23,6 +23,13 @@ type State = {
 }
 
 class AppRouting extends PureComponent<Props, State> {
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.lang !== this.props.lang) {
+          console.log('pokemons state has changed.')
+        }
+      }
+
     render () {
         return (
         <IntlProvider
@@ -30,13 +37,11 @@ class AppRouting extends PureComponent<Props, State> {
         locale={this.props.lang}
         messages={flatten(messages[this.props.lang])}
         >
-            <Fragment>
                 <Router>
                     <Switch>
                         <Route exact path={`/${this.props.lang}/`}  render={() => <HomePage currentPage="HOME_PAGE"/> }/>
                     </Switch>
                 </Router>
-            </Fragment>
         </IntlProvider>
         )
     }
