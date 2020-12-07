@@ -4,6 +4,7 @@ import {HomePage} from '../app/pages/index'
 import flatten from 'flat'
 import { IntlProvider } from 'react-intl'
 import { messages } from '../locale/index'
+import  { history } from '../store/middlewares/index'
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,11 +23,16 @@ type State = {
     
 }
 
+
+
 class AppRouting extends PureComponent<Props, State> {
+
+  
 
     componentDidUpdate(prevProps) {
         if (prevProps.lang !== this.props.lang) {
-          console.log('pokemons state has changed.')
+          console.log(this.props, history)
+          history.push(`/${this.props.lang}/`)
         }
       }
 
@@ -37,11 +43,11 @@ class AppRouting extends PureComponent<Props, State> {
         locale={this.props.lang}
         messages={flatten(messages[this.props.lang])}
         >
-                <Router>
-                    <Switch>
-                        <Route exact path={`/${this.props.lang}/`}  render={() => <HomePage currentPage="HOME_PAGE"/> }/>
-                    </Switch>
-                </Router>
+          <Router>
+              <Switch>
+                  <Route exact path={`/${this.props.lang}/`}  render={() => <HomePage currentPage="HOME_PAGE"/> }/>
+              </Switch>
+          </Router>
         </IntlProvider>
         )
     }

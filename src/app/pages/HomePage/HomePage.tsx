@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react'
 import { FormattedMessage } from 'react-intl'
 import {Counter, MenuLang} from '../../components/index'
 import './HomePage.scss'
-import withTranslations from '../../hoc/WithTranslations/WithTranslation'
+import { withRouter } from 'react-router-dom';
+
+
 
 type Props = {
     currentPage: string
@@ -29,4 +31,4 @@ class HomePage extends PureComponent<Props, State> {
 
 
 
-export default HomePage;
+export default withRouter(HomePage);

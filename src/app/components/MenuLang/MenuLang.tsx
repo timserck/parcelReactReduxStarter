@@ -2,13 +2,14 @@ import React, {PureComponent} from 'react';
 import { withRouter } from 'react-router'
 import {connect} from 'react-redux';
 import withTranslations from '../../hoc/WithTranslations/WithTranslation'
+
 type State = {
   
 }
 
 type Props = {
   handleSetTrad: (string) => void,
-  currentLang:  string
+  lang:  string
   history: any
 }
 
@@ -26,7 +27,7 @@ class MenuLang extends PureComponent<Props, State> {
     return (
       <div> 
         <h1> MenuLang </h1>
-        <p>{this.props.currentLang}</p>
+        <p>{this.props.lang}</p>
         <button onClick={() =>{this.props.handleSetTrad('en')}}> eng </button>
       </div>
     )
@@ -35,10 +36,10 @@ class MenuLang extends PureComponent<Props, State> {
 
 function mapStateToProps(state) {
   return {
-    currentLang: state.counter.index,
+    lang: state.counter.index,
   }
 }
 
 
 
-export default connect(mapStateToProps, null)(withTranslations(withRouter(MenuLang)));
+export default connect(mapStateToProps, null)(withTranslations(MenuLang));

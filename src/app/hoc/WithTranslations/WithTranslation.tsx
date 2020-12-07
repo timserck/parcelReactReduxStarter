@@ -4,16 +4,18 @@ import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {setTrad} from '../../../store/actions/account/trad'
 import { RootState } from '../../../store/reducers'
+
 type Props = {
   match: {
     path: string
   }
-  language: string
+  lang: string
 
 }
 
 const withTranslations = (Component: ComponentType) => {
   class WithTranslations extends PureComponent<RouteComponentProps & Props, {}> {
+
 
     render () {
       return (
